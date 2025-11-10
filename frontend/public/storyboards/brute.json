@@ -1,0 +1,11 @@
+{
+  "durationSec": 12,
+  "frames": [
+    { "t": 0, "action": "title_reveal" },
+    { "t": 2, "action": "token_stream_to_auth" },
+    { "t": 6, "action": "throttle_gate_lockout" },
+    { "t": 10, "action": "mfa_shield_teaser" }
+  ]
+}
+
+

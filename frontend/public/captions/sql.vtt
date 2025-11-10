@@ -1,0 +1,12 @@
+WEBVTT
+
+00:00.000 --> 00:02.000
+SQL Injection — conceptual introduction.
+
+00:02.000 --> 00:10.000
+Visualizing how unguarded query composition can lead to unintended results.
+
+00:10.000 --> 00:12.000
+Mitigation: parameterized queries and least privilege.
+
+

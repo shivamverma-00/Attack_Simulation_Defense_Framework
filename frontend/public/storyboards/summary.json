@@ -1,0 +1,10 @@
+{
+  "durationSec": 12,
+  "frames": [
+    { "t": 0, "action": "title_reveal" },
+    { "t": 2, "action": "signals_pan" },
+    { "t": 6, "action": "log_cards_stack" },
+    { "t": 10, "action": "checklist_teaser" }
+  ]
+}
+

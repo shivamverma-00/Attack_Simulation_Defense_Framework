@@ -1,0 +1,417 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Cyber Glow Effects */
+.cyber-glow {
+  box-shadow: 0 0 20px rgba(37, 99, 235, 0.5);
+  animation: cyberPulse 2s ease-in-out infinite alternate;
+}
+
+.cyber-red-glow {
+  box-shadow: 0 0 20px rgba(220, 38, 38, 0.5);
+  animation: cyberPulseRed 2s ease-in-out infinite alternate;
+}
+
+.cyber-green-glow {
+  box-shadow: 0 0 20px rgba(22, 163, 74, 0.5);
+  animation: cyberPulseGreen 2s ease-in-out infinite alternate;
+}
+
+/* Keyframe Animations */
+@keyframes cyberPulse {
+  0% {
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 30px rgba(37, 99, 235, 0.8), 0 0 40px rgba(37, 99, 235, 0.3);
+  }
+}
+
+@keyframes cyberPulseRed {
+  0% {
+    box-shadow: 0 0 20px rgba(220, 38, 38, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 30px rgba(220, 38, 38, 0.8), 0 0 40px rgba(220, 38, 38, 0.3);
+  }
+}
+
+@keyframes cyberPulseGreen {
+  0% {
+    box-shadow: 0 0 20px rgba(22, 163, 74, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 30px rgba(22, 163, 74, 0.8), 0 0 40px rgba(22, 163, 74, 0.3);
+  }
+}
+
+/* Page Transitions */
+.page-enter {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+}
+
+.page-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+}
+
+/* Card Animations */
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Fade In Animations */
+.fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.fade-in-delay-1 {
+  animation: fadeIn 0.6s ease-in-out 0.1s both;
+}
+
+.fade-in-delay-2 {
+  animation: fadeIn 0.6s ease-in-out 0.2s both;
+}
+
+.fade-in-delay-3 {
+  animation: fadeIn 0.6s ease-in-out 0.3s both;
+}
+
+.fade-in-delay-4 {
+  animation: fadeIn 0.6s ease-in-out 0.4s both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide In Animations */
+.slide-in-left {
+  animation: slideInLeft 0.6s ease-out;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.6s ease-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Loading Animations */
+.loading-spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-dots {
+  animation: loadingDots 1.5s ease-in-out infinite;
+}
+
+@keyframes loadingDots {
+  0%, 20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  80%, 100% {
+    opacity: 0;
+  }
+}
+
+/* Pulse Animations */
+.pulse-slow {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.pulse-fast {
+  animation: pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Bounce Animations */
+.bounce-in {
+  animation: bounceIn 0.6s ease-out;
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Shake Animation for Errors */
+.shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-5px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(5px);
+  }
+}
+
+/* Success Animation */
+.success-check {
+  animation: successCheck 0.6s ease-in-out;
+}
+
+@keyframes successCheck {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Attack Simulation Animations */
+.attack-blast {
+  animation: attackBlast 0.8s ease-out;
+}
+
+@keyframes attackBlast {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(220, 38, 38, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0);
+  }
+}
+
+.defense-shield {
+  animation: defenseShield 0.8s ease-out;
+}
+
+@keyframes defenseShield {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.7);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(22, 163, 74, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(22, 163, 74, 0);
+  }
+}
+
+/* Progress Bar Animation */
+.progress-bar {
+  transition: width 0.5s ease-in-out;
+}
+
+/* Floating Animation */
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Matrix Rain Effect */
+.matrix-rain {
+  position: relative;
+  overflow: hidden;
+}
+
+.matrix-rain::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(transparent, rgba(0, 255, 0, 0.1), transparent);
+  animation: matrixRain 2s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes matrixRain {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+/* Glitch Effect */
+.glitch {
+  position: relative;
+  animation: glitch 0.3s ease-in-out infinite alternate;
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+/* Smooth Transitions */
+.smooth-transition {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hover Effects */
+.hover-lift:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s ease-in-out;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Button Animations */
+.btn-press {
+  transition: transform 0.1s ease-in-out;
+}
+
+.btn-press:active {
+  transform: scale(0.95);
+}
+
+/* Notification Animations */
+.notification-slide {
+  animation: notificationSlide 0.5s ease-out;
+}
+
+@keyframes notificationSlide {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+

@@ -1,0 +1,11 @@
+{
+  "durationSec": 12,
+  "frames": [
+    { "t": 0, "action": "title_reveal" },
+    { "t": 2, "action": "dual_lanes_converge" },
+    { "t": 6, "action": "victim_state_change" },
+    { "t": 10, "action": "csp_shield_teaser" }
+  ]
+}
+
+

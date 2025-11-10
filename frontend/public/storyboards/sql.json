@@ -1,0 +1,12 @@
+{
+  "durationSec": 12,
+  "frames": [
+    { "t": 0, "action": "title_reveal" },
+    { "t": 2, "action": "parallax_pan_in" },
+    { "t": 4, "action": "token_move_actor_to_app" },
+    { "t": 7, "action": "token_move_app_to_db" },
+    { "t": 10, "action": "mitigation_icons_teaser" }
+  ]
+}
+
+
